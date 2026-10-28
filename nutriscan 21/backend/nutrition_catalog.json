@@ -1,0 +1,1396 @@
+{
+ "source": {
+  "name": "NutriScan reference catalog",
+  "version": "2026.10",
+  "basis": "per 100 g, as served",
+  "note": "Approximate reference values averaged from public food-composition tables (e.g. USDA FoodData Central, IFCT 2017). Recipes vary, so treat results as estimates, not medical advice."
+ },
+ "foods": [
+  {
+   "id": "roti",
+   "name": "Roti / Chapati",
+   "aliases": [
+    "chapati",
+    "phulka",
+    "rotis",
+    "chapathi"
+   ],
+   "category": "bread",
+   "per_100g": {
+    "calories": 297.0,
+    "protein_g": 9.8,
+    "carbs_g": 46.0,
+    "fat_g": 7.5,
+    "fiber_g": 4.9
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 40.0
+   }
+  },
+  {
+   "id": "naan",
+   "name": "Naan",
+   "aliases": [
+    "butter naan"
+   ],
+   "category": "bread",
+   "per_100g": {
+    "calories": 310.0,
+    "protein_g": 9.0,
+    "carbs_g": 50.0,
+    "fat_g": 8.0,
+    "fiber_g": 2.2
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 90.0
+   }
+  },
+  {
+   "id": "paratha",
+   "name": "Plain paratha",
+   "aliases": [
+    "parotta",
+    "parantha"
+   ],
+   "category": "bread",
+   "per_100g": {
+    "calories": 326.0,
+    "protein_g": 6.4,
+    "carbs_g": 45.0,
+    "fat_g": 13.0,
+    "fiber_g": 4.5
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 80.0
+   }
+  },
+  {
+   "id": "aloo_paratha",
+   "name": "Aloo paratha",
+   "aliases": [
+    "potato paratha"
+   ],
+   "category": "bread",
+   "per_100g": {
+    "calories": 250.0,
+    "protein_g": 5.0,
+    "carbs_g": 34.0,
+    "fat_g": 10.0,
+    "fiber_g": 3.0
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 110.0
+   }
+  },
+  {
+   "id": "bread_white",
+   "name": "White bread",
+   "aliases": [
+    "toast",
+    "bread"
+   ],
+   "category": "bread",
+   "per_100g": {
+    "calories": 265.0,
+    "protein_g": 9.0,
+    "carbs_g": 49.0,
+    "fat_g": 3.2,
+    "fiber_g": 2.7
+   },
+   "serving": {
+    "unit": "slice",
+    "grams": 25.0
+   }
+  },
+  {
+   "id": "bread_brown",
+   "name": "Brown bread",
+   "aliases": [
+    "whole wheat bread"
+   ],
+   "category": "bread",
+   "per_100g": {
+    "calories": 247.0,
+    "protein_g": 13.0,
+    "carbs_g": 41.0,
+    "fat_g": 3.4,
+    "fiber_g": 7.0
+   },
+   "serving": {
+    "unit": "slice",
+    "grams": 28.0
+   }
+  },
+  {
+   "id": "rice_white",
+   "name": "Steamed rice",
+   "aliases": [
+    "rice",
+    "white rice",
+    "chawal",
+    "plain rice"
+   ],
+   "category": "grains",
+   "per_100g": {
+    "calories": 130.0,
+    "protein_g": 2.7,
+    "carbs_g": 28.0,
+    "fat_g": 0.3,
+    "fiber_g": 0.4
+   },
+   "serving": {
+    "unit": "cup",
+    "grams": 158.0
+   }
+  },
+  {
+   "id": "rice_brown",
+   "name": "Brown rice",
+   "aliases": [],
+   "category": "grains",
+   "per_100g": {
+    "calories": 123.0,
+    "protein_g": 2.7,
+    "carbs_g": 25.6,
+    "fat_g": 1.0,
+    "fiber_g": 1.6
+   },
+   "serving": {
+    "unit": "cup",
+    "grams": 158.0
+   }
+  },
+  {
+   "id": "jeera_rice",
+   "name": "Jeera rice",
+   "aliases": [
+    "cumin rice"
+   ],
+   "category": "grains",
+   "per_100g": {
+    "calories": 160.0,
+    "protein_g": 3.0,
+    "carbs_g": 28.0,
+    "fat_g": 4.0,
+    "fiber_g": 0.8
+   },
+   "serving": {
+    "unit": "cup",
+    "grams": 160.0
+   }
+  },
+  {
+   "id": "biryani_chicken",
+   "name": "Chicken biryani",
+   "aliases": [
+    "biryani"
+   ],
+   "category": "grains",
+   "per_100g": {
+    "calories": 180.0,
+    "protein_g": 9.0,
+    "carbs_g": 22.0,
+    "fat_g": 6.0,
+    "fiber_g": 1.0
+   },
+   "serving": {
+    "unit": "plate",
+    "grams": 250.0
+   }
+  },
+  {
+   "id": "biryani_veg",
+   "name": "Veg biryani",
+   "aliases": [
+    "pulao",
+    "veg pulao"
+   ],
+   "category": "grains",
+   "per_100g": {
+    "calories": 150.0,
+    "protein_g": 3.5,
+    "carbs_g": 24.0,
+    "fat_g": 4.5,
+    "fiber_g": 1.8
+   },
+   "serving": {
+    "unit": "plate",
+    "grams": 250.0
+   }
+  },
+  {
+   "id": "fried_rice",
+   "name": "Fried rice",
+   "aliases": [],
+   "category": "grains",
+   "per_100g": {
+    "calories": 163.0,
+    "protein_g": 4.0,
+    "carbs_g": 28.0,
+    "fat_g": 4.0,
+    "fiber_g": 1.0
+   },
+   "serving": {
+    "unit": "plate",
+    "grams": 200.0
+   }
+  },
+  {
+   "id": "khichdi",
+   "name": "Khichdi",
+   "aliases": [
+    "khichri"
+   ],
+   "category": "grains",
+   "per_100g": {
+    "calories": 120.0,
+    "protein_g": 4.5,
+    "carbs_g": 20.0,
+    "fat_g": 2.5,
+    "fiber_g": 2.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 200.0
+   }
+  },
+  {
+   "id": "poha",
+   "name": "Poha",
+   "aliases": [
+    "flattened rice"
+   ],
+   "category": "grains",
+   "per_100g": {
+    "calories": 158.0,
+    "protein_g": 3.0,
+    "carbs_g": 26.0,
+    "fat_g": 4.5,
+    "fiber_g": 1.5
+   },
+   "serving": {
+    "unit": "plate",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "upma",
+   "name": "Upma",
+   "aliases": [],
+   "category": "grains",
+   "per_100g": {
+    "calories": 150.0,
+    "protein_g": 3.5,
+    "carbs_g": 22.0,
+    "fat_g": 5.0,
+    "fiber_g": 2.0
+   },
+   "serving": {
+    "unit": "plate",
+    "grams": 180.0
+   }
+  },
+  {
+   "id": "oats_porridge",
+   "name": "Oats porridge",
+   "aliases": [
+    "oats",
+    "oatmeal",
+    "porridge"
+   ],
+   "category": "grains",
+   "per_100g": {
+    "calories": 71.0,
+    "protein_g": 2.5,
+    "carbs_g": 12.0,
+    "fat_g": 1.5,
+    "fiber_g": 1.7
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 240.0
+   }
+  },
+  {
+   "id": "pasta",
+   "name": "Pasta",
+   "aliases": [
+    "spaghetti",
+    "penne",
+    "macaroni"
+   ],
+   "category": "grains",
+   "per_100g": {
+    "calories": 158.0,
+    "protein_g": 5.8,
+    "carbs_g": 31.0,
+    "fat_g": 0.9,
+    "fiber_g": 1.8
+   },
+   "serving": {
+    "unit": "plate",
+    "grams": 200.0
+   }
+  },
+  {
+   "id": "noodles",
+   "name": "Hakka noodles",
+   "aliases": [
+    "noodles",
+    "chow mein",
+    "chowmein"
+   ],
+   "category": "grains",
+   "per_100g": {
+    "calories": 170.0,
+    "protein_g": 4.0,
+    "carbs_g": 25.0,
+    "fat_g": 6.0,
+    "fiber_g": 1.5
+   },
+   "serving": {
+    "unit": "plate",
+    "grams": 200.0
+   }
+  },
+  {
+   "id": "idli",
+   "name": "Idli",
+   "aliases": [
+    "idly"
+   ],
+   "category": "south_indian",
+   "per_100g": {
+    "calories": 146.0,
+    "protein_g": 4.5,
+    "carbs_g": 30.0,
+    "fat_g": 0.6,
+    "fiber_g": 1.5
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 40.0
+   }
+  },
+  {
+   "id": "dosa",
+   "name": "Plain dosa",
+   "aliases": [
+    "dosa"
+   ],
+   "category": "south_indian",
+   "per_100g": {
+    "calories": 168.0,
+    "protein_g": 3.9,
+    "carbs_g": 29.0,
+    "fat_g": 3.7,
+    "fiber_g": 1.0
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 85.0
+   }
+  },
+  {
+   "id": "masala_dosa",
+   "name": "Masala dosa",
+   "aliases": [],
+   "category": "south_indian",
+   "per_100g": {
+    "calories": 190.0,
+    "protein_g": 4.0,
+    "carbs_g": 27.0,
+    "fat_g": 7.5,
+    "fiber_g": 2.0
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 160.0
+   }
+  },
+  {
+   "id": "sambar",
+   "name": "Sambar",
+   "aliases": [
+    "sambhar"
+   ],
+   "category": "legumes",
+   "per_100g": {
+    "calories": 65.0,
+    "protein_g": 3.0,
+    "carbs_g": 9.0,
+    "fat_g": 2.0,
+    "fiber_g": 2.5
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "dal",
+   "name": "Dal tadka",
+   "aliases": [
+    "dal",
+    "daal",
+    "dhal",
+    "lentil curry",
+    "dal fry"
+   ],
+   "category": "legumes",
+   "per_100g": {
+    "calories": 104.0,
+    "protein_g": 5.5,
+    "carbs_g": 13.0,
+    "fat_g": 3.5,
+    "fiber_g": 3.5
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "dal_makhani",
+   "name": "Dal makhani",
+   "aliases": [],
+   "category": "legumes",
+   "per_100g": {
+    "calories": 140.0,
+    "protein_g": 6.0,
+    "carbs_g": 14.0,
+    "fat_g": 7.0,
+    "fiber_g": 4.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "chole",
+   "name": "Chole",
+   "aliases": [
+    "chana masala",
+    "chickpea curry",
+    "chickpeas"
+   ],
+   "category": "legumes",
+   "per_100g": {
+    "calories": 160.0,
+    "protein_g": 7.0,
+    "carbs_g": 20.0,
+    "fat_g": 6.0,
+    "fiber_g": 6.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "rajma",
+   "name": "Rajma curry",
+   "aliases": [
+    "rajma",
+    "kidney beans"
+   ],
+   "category": "legumes",
+   "per_100g": {
+    "calories": 140.0,
+    "protein_g": 6.5,
+    "carbs_g": 18.0,
+    "fat_g": 5.0,
+    "fiber_g": 5.5
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "sprouts_salad",
+   "name": "Sprouts salad",
+   "aliases": [
+    "sprouts",
+    "moong sprouts"
+   ],
+   "category": "legumes",
+   "per_100g": {
+    "calories": 60.0,
+    "protein_g": 4.0,
+    "carbs_g": 9.0,
+    "fat_g": 0.5,
+    "fiber_g": 2.5
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 100.0
+   }
+  },
+  {
+   "id": "paneer",
+   "name": "Paneer",
+   "aliases": [
+    "cottage cheese"
+   ],
+   "category": "dairy",
+   "per_100g": {
+    "calories": 321.0,
+    "protein_g": 25.0,
+    "carbs_g": 3.6,
+    "fat_g": 25.0,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "serving",
+    "grams": 50.0
+   }
+  },
+  {
+   "id": "paneer_butter_masala",
+   "name": "Paneer butter masala",
+   "aliases": [
+    "paneer makhani",
+    "shahi paneer"
+   ],
+   "category": "curry",
+   "per_100g": {
+    "calories": 230.0,
+    "protein_g": 9.0,
+    "carbs_g": 8.0,
+    "fat_g": 18.0,
+    "fiber_g": 1.5
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "palak_paneer",
+   "name": "Palak paneer",
+   "aliases": [
+    "saag paneer"
+   ],
+   "category": "curry",
+   "per_100g": {
+    "calories": 150.0,
+    "protein_g": 7.0,
+    "carbs_g": 5.0,
+    "fat_g": 11.0,
+    "fiber_g": 2.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "paneer_wrap",
+   "name": "Paneer wrap",
+   "aliases": [
+    "wrap",
+    "kathi roll",
+    "paneer roll",
+    "frankie"
+   ],
+   "category": "snack",
+   "per_100g": {
+    "calories": 210.0,
+    "protein_g": 11.0,
+    "carbs_g": 30.0,
+    "fat_g": 7.0,
+    "fiber_g": 2.5
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 200.0
+   }
+  },
+  {
+   "id": "aloo_sabzi",
+   "name": "Aloo sabzi",
+   "aliases": [
+    "potato curry",
+    "aloo"
+   ],
+   "category": "curry",
+   "per_100g": {
+    "calories": 120.0,
+    "protein_g": 2.0,
+    "carbs_g": 15.0,
+    "fat_g": 6.0,
+    "fiber_g": 2.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "mixed_veg",
+   "name": "Mixed vegetable curry",
+   "aliases": [
+    "sabzi",
+    "veg curry",
+    "mixed veg"
+   ],
+   "category": "curry",
+   "per_100g": {
+    "calories": 95.0,
+    "protein_g": 2.5,
+    "carbs_g": 10.0,
+    "fat_g": 5.0,
+    "fiber_g": 3.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "chicken_curry",
+   "name": "Chicken curry",
+   "aliases": [],
+   "category": "curry",
+   "per_100g": {
+    "calories": 150.0,
+    "protein_g": 14.0,
+    "carbs_g": 5.0,
+    "fat_g": 8.0,
+    "fiber_g": 1.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 200.0
+   }
+  },
+  {
+   "id": "butter_chicken",
+   "name": "Butter chicken",
+   "aliases": [
+    "murgh makhani"
+   ],
+   "category": "curry",
+   "per_100g": {
+    "calories": 210.0,
+    "protein_g": 14.0,
+    "carbs_g": 6.0,
+    "fat_g": 14.0,
+    "fiber_g": 1.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 200.0
+   }
+  },
+  {
+   "id": "fish_curry",
+   "name": "Fish curry",
+   "aliases": [],
+   "category": "curry",
+   "per_100g": {
+    "calories": 130.0,
+    "protein_g": 15.0,
+    "carbs_g": 4.0,
+    "fat_g": 6.0,
+    "fiber_g": 0.5
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 200.0
+   }
+  },
+  {
+   "id": "egg_curry",
+   "name": "Egg curry",
+   "aliases": [],
+   "category": "curry",
+   "per_100g": {
+    "calories": 140.0,
+    "protein_g": 8.0,
+    "carbs_g": 5.0,
+    "fat_g": 10.0,
+    "fiber_g": 1.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 200.0
+   }
+  },
+  {
+   "id": "roasted_chicken",
+   "name": "Roasted Chicken",
+   "aliases": [
+    "roasted chicken",
+    "roast chicken",
+    "rotisserie chicken",
+    "cooked chicken",
+    "whole chicken",
+    "baked chicken",
+    "rotisserie"
+   ],
+   "category": "protein",
+   "per_100g": {
+    "calories": 215.0,
+    "protein_g": 27.0,
+    "carbs_g": 0.0,
+    "fat_g": 11.0,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "portion",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "chicken_breast",
+   "name": "Grilled chicken",
+   "aliases": [
+    "chicken",
+    "chicken breast",
+    "tandoori chicken",
+    "grilled chicken",
+    "chicken steak"
+   ],
+   "category": "protein",
+   "per_100g": {
+    "calories": 165.0,
+    "protein_g": 31.0,
+    "carbs_g": 0.0,
+    "fat_g": 3.6,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "serving",
+    "grams": 120.0
+   }
+  },
+  {
+   "id": "fish_grilled",
+   "name": "Grilled fish",
+   "aliases": [
+    "fish",
+    "salmon",
+    "fish fillet"
+   ],
+   "category": "protein",
+   "per_100g": {
+    "calories": 136.0,
+    "protein_g": 24.0,
+    "carbs_g": 0.0,
+    "fat_g": 4.0,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "fillet",
+    "grams": 120.0
+   }
+  },
+  {
+   "id": "egg_boiled",
+   "name": "Boiled egg",
+   "aliases": [
+    "egg",
+    "eggs",
+    "boiled eggs"
+   ],
+   "category": "protein",
+   "per_100g": {
+    "calories": 155.0,
+    "protein_g": 13.0,
+    "carbs_g": 1.1,
+    "fat_g": 11.0,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 50.0
+   }
+  },
+  {
+   "id": "omelette",
+   "name": "Omelette",
+   "aliases": [
+    "omelet"
+   ],
+   "category": "protein",
+   "per_100g": {
+    "calories": 154.0,
+    "protein_g": 11.0,
+    "carbs_g": 0.6,
+    "fat_g": 12.0,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 110.0
+   }
+  },
+  {
+   "id": "tofu",
+   "name": "Tofu",
+   "aliases": [],
+   "category": "protein",
+   "per_100g": {
+    "calories": 76.0,
+    "protein_g": 8.0,
+    "carbs_g": 1.9,
+    "fat_g": 4.8,
+    "fiber_g": 0.3
+   },
+   "serving": {
+    "unit": "serving",
+    "grams": 100.0
+   }
+  },
+  {
+   "id": "green_salad",
+   "name": "Green salad",
+   "aliases": [
+    "salad",
+    "cucumber",
+    "kachumber",
+    "tomato salad"
+   ],
+   "category": "vegetables",
+   "per_100g": {
+    "calories": 20.0,
+    "protein_g": 1.2,
+    "carbs_g": 3.5,
+    "fat_g": 0.2,
+    "fiber_g": 1.8
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 100.0
+   }
+  },
+  {
+   "id": "veg_soup",
+   "name": "Vegetable soup",
+   "aliases": [
+    "soup"
+   ],
+   "category": "vegetables",
+   "per_100g": {
+    "calories": 35.0,
+    "protein_g": 1.5,
+    "carbs_g": 6.0,
+    "fat_g": 0.5,
+    "fiber_g": 1.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 250.0
+   }
+  },
+  {
+   "id": "curd",
+   "name": "Curd / Yogurt",
+   "aliases": [
+    "yogurt",
+    "dahi",
+    "yoghurt"
+   ],
+   "category": "dairy",
+   "per_100g": {
+    "calories": 61.0,
+    "protein_g": 3.5,
+    "carbs_g": 4.7,
+    "fat_g": 3.3,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "raita",
+   "name": "Raita",
+   "aliases": [],
+   "category": "dairy",
+   "per_100g": {
+    "calories": 70.0,
+    "protein_g": 3.0,
+    "carbs_g": 5.0,
+    "fat_g": 4.0,
+    "fiber_g": 0.5
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 100.0
+   }
+  },
+  {
+   "id": "milk",
+   "name": "Milk",
+   "aliases": [],
+   "category": "drinks",
+   "per_100g": {
+    "calories": 61.0,
+    "protein_g": 3.2,
+    "carbs_g": 4.8,
+    "fat_g": 3.3,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "glass",
+    "grams": 250.0
+   }
+  },
+  {
+   "id": "tea",
+   "name": "Tea with milk",
+   "aliases": [
+    "chai",
+    "tea"
+   ],
+   "category": "drinks",
+   "per_100g": {
+    "calories": 40.0,
+    "protein_g": 1.0,
+    "carbs_g": 6.0,
+    "fat_g": 1.3,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "cup",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "coffee",
+   "name": "Coffee with milk",
+   "aliases": [
+    "coffee",
+    "latte",
+    "cappuccino"
+   ],
+   "category": "drinks",
+   "per_100g": {
+    "calories": 38.0,
+    "protein_g": 1.8,
+    "carbs_g": 4.5,
+    "fat_g": 1.5,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "cup",
+    "grams": 200.0
+   }
+  },
+  {
+   "id": "banana",
+   "name": "Banana",
+   "aliases": [
+    "bananas"
+   ],
+   "category": "fruit",
+   "per_100g": {
+    "calories": 89.0,
+    "protein_g": 1.1,
+    "carbs_g": 23.0,
+    "fat_g": 0.3,
+    "fiber_g": 2.6
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 118.0
+   }
+  },
+  {
+   "id": "apple",
+   "name": "Apple",
+   "aliases": [
+    "apples"
+   ],
+   "category": "fruit",
+   "per_100g": {
+    "calories": 52.0,
+    "protein_g": 0.3,
+    "carbs_g": 14.0,
+    "fat_g": 0.2,
+    "fiber_g": 2.4
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 182.0
+   }
+  },
+  {
+   "id": "orange",
+   "name": "Orange",
+   "aliases": [
+    "oranges"
+   ],
+   "category": "fruit",
+   "per_100g": {
+    "calories": 47.0,
+    "protein_g": 0.9,
+    "carbs_g": 12.0,
+    "fat_g": 0.1,
+    "fiber_g": 2.4
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 131.0
+   }
+  },
+  {
+   "id": "mango",
+   "name": "Mango",
+   "aliases": [],
+   "category": "fruit",
+   "per_100g": {
+    "calories": 60.0,
+    "protein_g": 0.8,
+    "carbs_g": 15.0,
+    "fat_g": 0.4,
+    "fiber_g": 1.6
+   },
+   "serving": {
+    "unit": "cup",
+    "grams": 165.0
+   }
+  },
+  {
+   "id": "grapes",
+   "name": "Grapes",
+   "aliases": [],
+   "category": "fruit",
+   "per_100g": {
+    "calories": 69.0,
+    "protein_g": 0.7,
+    "carbs_g": 18.0,
+    "fat_g": 0.2,
+    "fiber_g": 0.9
+   },
+   "serving": {
+    "unit": "cup",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "papaya",
+   "name": "Papaya",
+   "aliases": [],
+   "category": "fruit",
+   "per_100g": {
+    "calories": 43.0,
+    "protein_g": 0.5,
+    "carbs_g": 11.0,
+    "fat_g": 0.3,
+    "fiber_g": 1.7
+   },
+   "serving": {
+    "unit": "cup",
+    "grams": 145.0
+   }
+  },
+  {
+   "id": "watermelon",
+   "name": "Watermelon",
+   "aliases": [],
+   "category": "fruit",
+   "per_100g": {
+    "calories": 30.0,
+    "protein_g": 0.6,
+    "carbs_g": 7.6,
+    "fat_g": 0.2,
+    "fiber_g": 0.4
+   },
+   "serving": {
+    "unit": "cup",
+    "grams": 152.0
+   }
+  },
+  {
+   "id": "fruit_bowl",
+   "name": "Mixed fruit bowl",
+   "aliases": [
+    "fruit salad",
+    "fruits",
+    "fruit"
+   ],
+   "category": "fruit",
+   "per_100g": {
+    "calories": 56.0,
+    "protein_g": 0.7,
+    "carbs_g": 14.0,
+    "fat_g": 0.2,
+    "fiber_g": 1.8
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 250.0
+   }
+  },
+  {
+   "id": "almonds",
+   "name": "Almonds",
+   "aliases": [
+    "nuts",
+    "badam"
+   ],
+   "category": "nuts",
+   "per_100g": {
+    "calories": 579.0,
+    "protein_g": 21.0,
+    "carbs_g": 22.0,
+    "fat_g": 50.0,
+    "fiber_g": 12.5
+   },
+   "serving": {
+    "unit": "handful",
+    "grams": 28.0
+   }
+  },
+  {
+   "id": "peanut_butter",
+   "name": "Peanut butter",
+   "aliases": [],
+   "category": "nuts",
+   "per_100g": {
+    "calories": 588.0,
+    "protein_g": 25.0,
+    "carbs_g": 20.0,
+    "fat_g": 50.0,
+    "fiber_g": 6.0
+   },
+   "serving": {
+    "unit": "tbsp",
+    "grams": 16.0
+   }
+  },
+  {
+   "id": "butter",
+   "name": "Butter",
+   "aliases": [],
+   "category": "fats",
+   "per_100g": {
+    "calories": 717.0,
+    "protein_g": 0.9,
+    "carbs_g": 0.1,
+    "fat_g": 81.0,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "tbsp",
+    "grams": 14.0
+   }
+  },
+  {
+   "id": "ghee",
+   "name": "Ghee",
+   "aliases": [],
+   "category": "fats",
+   "per_100g": {
+    "calories": 900.0,
+    "protein_g": 0.0,
+    "carbs_g": 0.0,
+    "fat_g": 100.0,
+    "fiber_g": 0.0
+   },
+   "serving": {
+    "unit": "tsp",
+    "grams": 5.0
+   }
+  },
+  {
+   "id": "samosa",
+   "name": "Samosa",
+   "aliases": [
+    "samosas"
+   ],
+   "category": "snack",
+   "per_100g": {
+    "calories": 262.0,
+    "protein_g": 4.5,
+    "carbs_g": 30.0,
+    "fat_g": 14.0,
+    "fiber_g": 2.5
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 70.0
+   }
+  },
+  {
+   "id": "pakora",
+   "name": "Pakora",
+   "aliases": [
+    "bhaji",
+    "pakoda",
+    "bhajiya"
+   ],
+   "category": "snack",
+   "per_100g": {
+    "calories": 290.0,
+    "protein_g": 6.0,
+    "carbs_g": 28.0,
+    "fat_g": 17.0,
+    "fiber_g": 3.0
+   },
+   "serving": {
+    "unit": "serving",
+    "grams": 100.0
+   }
+  },
+  {
+   "id": "french_fries",
+   "name": "French fries",
+   "aliases": [
+    "fries",
+    "chips"
+   ],
+   "category": "fast_food",
+   "per_100g": {
+    "calories": 312.0,
+    "protein_g": 3.4,
+    "carbs_g": 41.0,
+    "fat_g": 15.0,
+    "fiber_g": 3.8
+   },
+   "serving": {
+    "unit": "serving",
+    "grams": 117.0
+   }
+  },
+  {
+   "id": "pizza",
+   "name": "Pizza",
+   "aliases": [],
+   "category": "fast_food",
+   "per_100g": {
+    "calories": 266.0,
+    "protein_g": 11.0,
+    "carbs_g": 33.0,
+    "fat_g": 10.0,
+    "fiber_g": 2.3
+   },
+   "serving": {
+    "unit": "slice",
+    "grams": 107.0
+   }
+  },
+  {
+   "id": "burger",
+   "name": "Burger",
+   "aliases": [
+    "hamburger",
+    "veg burger"
+   ],
+   "category": "fast_food",
+   "per_100g": {
+    "calories": 254.0,
+    "protein_g": 13.0,
+    "carbs_g": 29.0,
+    "fat_g": 9.6,
+    "fiber_g": 1.4
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "sandwich_veg",
+   "name": "Veg sandwich",
+   "aliases": [
+    "sandwich"
+   ],
+   "category": "fast_food",
+   "per_100g": {
+    "calories": 200.0,
+    "protein_g": 6.0,
+    "carbs_g": 28.0,
+    "fat_g": 7.0,
+    "fiber_g": 3.0
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "gulab_jamun",
+   "name": "Gulab jamun",
+   "aliases": [],
+   "category": "sweets",
+   "per_100g": {
+    "calories": 323.0,
+    "protein_g": 5.0,
+    "carbs_g": 50.0,
+    "fat_g": 12.0,
+    "fiber_g": 0.5
+   },
+   "serving": {
+    "unit": "piece",
+    "grams": 40.0
+   }
+  },
+  {
+   "id": "ice_cream",
+   "name": "Ice cream",
+   "aliases": [],
+   "category": "sweets",
+   "per_100g": {
+    "calories": 207.0,
+    "protein_g": 3.5,
+    "carbs_g": 24.0,
+    "fat_g": 11.0,
+    "fiber_g": 0.7
+   },
+   "serving": {
+    "unit": "scoop",
+    "grams": 66.0
+   }
+  },
+  {
+   "id": "kheer",
+   "name": "Kheer",
+   "aliases": [
+    "rice pudding",
+    "payasam"
+   ],
+   "category": "sweets",
+   "per_100g": {
+    "calories": 140.0,
+    "protein_g": 4.0,
+    "carbs_g": 21.0,
+    "fat_g": 4.5,
+    "fiber_g": 0.3
+   },
+   "serving": {
+    "unit": "bowl",
+    "grams": 150.0
+   }
+  },
+  {
+   "id": "cake",
+   "name": "Cake",
+   "aliases": [
+    "pastry"
+   ],
+   "category": "sweets",
+   "per_100g": {
+    "calories": 370.0,
+    "protein_g": 5.0,
+    "carbs_g": 53.0,
+    "fat_g": 15.0,
+    "fiber_g": 1.0
+   },
+   "serving": {
+    "unit": "slice",
+    "grams": 80.0
+   }
+  }
+ ]
+}

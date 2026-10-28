@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 14
+names: ['- Indian_Food - 2024-07-12 9-28am', '10', '11', '12', '13', '4', '5', '6', '7', '8', '9', 'License- CC BY 4.0', 'Provided by a Roboflow user', 'https---universe.roboflow.com-royal0wl-indian_food-6hxeg']
+
+roboflow:
+  workspace: yajat-chopra
+  project: indian-food-clzdq-iwhvi
+  version: 1
+  license: CC BY 4.0
+  url: https://app.roboflow.com/yajat-chopra/indian-food-clzdq-iwhvi/1
