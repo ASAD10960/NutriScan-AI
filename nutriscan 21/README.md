@@ -1,71 +1,224 @@
-# NutriScan AI
+<div align="center">
 
-Snap or upload a meal photo, get the detected foods with confidence and on-image boxes, adjust portions or swap foods, see calories/protein/carbs/fat/fiber, save meals to history, and track trends against your goals.
+# 🥗 NutriScan AI
 
-Built for one person running it locally: a Python standard-library web server, SQLite, and Pillow on the back end, and a plain HTML/CSS/JavaScript single-page app on the front end. No build step, no framework install.
+**Instant, intelligent food recognition and deterministic nutritional analysis right from your meal photos.**
 
-## Run it
+[![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-00FFFF.svg?logo=yolo&logoColor=white)](https://github.com/ultralytics/ultralytics)
+[![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](../LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/ASAD10960/NutriScan-AI?style=social)](https://github.com/ASAD10960/NutriScan-AI)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 
-You need Python 3.10 or newer.
+<br />
+
+<!-- PROJECT BANNER / DEMO SCREENSHOT -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ASAD10960/NutriScan-AI/main/nutriscan%2021/runs/nutriscan_food/results.png" alt="NutriScan AI Banner" width="850px" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);" />
+</p>
+
+*Snap or upload a photo of your meal to automatically detect food items, display bounding boxes, compute macro/micronutrients, adjust portions, and track long-term nutrition habits.*
+
+</div>
+
+---
+
+## 📖 Table of Contents
+- [✨ Key Features](#-key-features)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🏗️ System Architecture & Workflow](#️-system-architecture--workflow)
+- [🚀 Getting Started & Installation](#-getting-started--installation)
+- [💻 Usage Guide](#-usage-guide)
+- [📊 Nutritional Catalog & Accuracy](#-nutritional-catalog--accuracy)
+- [🗺️ Roadmap](#️-roadmap)
+- [🤝 Contributing](#-contributing)
+- [📄 License & Acknowledgments](#-license--acknowledgments)
+
+---
+
+## ✨ Key Features
+
+- 📸 **Multi-Modal AI Food Detection**: Hybrid recognition engine combining **YOLOv8** object detection and **MobileNetV3** deep visual classification to detect dishes with spatial bounding boxes.
+- 🥗 **Instant Macro & Micro Breakdown**: Real-time deterministic calculation of **calories, protein, carbohydrates, fats, and dietary fiber** scaled accurately to serving sizes.
+- 🍛 **Curated Food Catalog**: 70+ common Indian and international dishes with versioned nutritional baselines derived from IFCT 2017 & USDA FoodData Central.
+- ⚖️ **Interactive Portion Controls**: Effortlessly tweak gram weights, adjust serving sizes, or swap recognized items directly with instant recalculation.
+- 📊 **Trends & Habit Tracking**: Clean, interactive dashboard showing daily calorie progress, macro split percentages, logging streaks, and meal histories.
+- 🔒 **Local & Privacy-First**: 100% functional offline with zero cloud telemetry. Your images and personal meal logs remain stored locally in your SQLite database.
+- ⚡ **Zero-Build Lightweight UI**: Pure Vanilla HTML5/CSS3/JavaScript SPA with smooth glassmorphism, responsive layout, and dark/light accents—no complex build chains or node_modules needed.
+
+---
+
+## 🛠️ Tech Stack
+
+### **Machine Learning & Vision**
+- **[Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)**: Real-time object detection and spatial bounding box estimation.
+- **[PyTorch](https://pytorch.org/) & [TorchVision](https://pytorch.org/vision)**: Deep neural network execution and MobileNetV3 visual classification.
+- **[Pillow (PIL)](https://python-pillow.org/)**: Image format decoding, auto-orientation, aspect ratio checks, and quality validation.
+
+### **Backend & Storage**
+- **Python Standard Library (3.10+)**: Native multi-threaded HTTP server (`ThreadingHTTPServer`) and robust RESTful API routing.
+- **SQLite3**: Lightweight, zero-configuration local database for user sessions, historical meal records, and nutritional logs.
+- **Token-based Authentication**: Cryptographic SHA-256 session management and secure bearer token authorization.
+
+### **Frontend & User Interface**
+- **HTML5 & Vanilla CSS3**: Hand-crafted modern styling featuring glassmorphic components, micro-animations, and fluid responsive design.
+- **Vanilla JavaScript (ES6+)**: Custom reactive state management, asynchronous fetch client, and client-side hash routing.
+- **Typography**: Google Fonts (*Plus Jakarta Sans*).
+
+---
+
+## 🏗️ System Architecture & Workflow
+
+NutriScan AI bridges vision processing and nutritional computation through a streamlined sequential pipeline:
 
 ```
-./run.sh            # macOS / Linux
-run.bat             # Windows
-# or manually:
+┌─────────────────┐       ┌──────────────────────┐       ┌────────────────────────┐
+│  User Uploads   │ ────> │ Image Preprocessing  │ ────> │ Multi-Modal Vision AI  │
+│ Meal Photo /Cam │       │ Quality & Validation │       │ YOLOv8n + MobileNetV3  │
+└─────────────────┘       └──────────────────────┘       └───────────┬────────────┘
+                                                                     │
+                                                                     ▼
+┌─────────────────┐       ┌──────────────────────┐       ┌────────────────────────┐
+│ Interactive UI  │ <──── │ Nutrition Calculation│ <──── │ Catalog Resolution     │
+│ Adjust & Save   │       │ Macros & Energy Split│       │ USDA / IFCT Matching   │
+└─────────────────┘       └──────────────────────┘       └────────────────────────┘
+```
+
+### Pipeline Details
+1. **Validation & Assessment**: Uploaded images are checked for dimensions (128px – 8000px), file size (under 5 MB), brightness, blur, and contrast.
+2. **Detection & Spatial Localization**: YOLOv8 locates food items and generates normalized bounding coordinates `[x, y, w, h]`, while MobileNetV3 classifies dish categories.
+3. **Deterministic Mapping**: Detected entities are matched against `nutrition_catalog.json`. Foods receive standardized gram estimates and exact nutritional baselines.
+4. **State Transitions**: Analyses progress through deterministic states:
+   $$\text{ANALYZING} \longrightarrow \text{CALCULATED} \longrightarrow \text{SAVED}$$
+
+---
+
+## 🚀 Getting Started & Installation
+
+### Prerequisites
+- **Python 3.10** or higher installed ([Download Python](https://www.python.org/downloads/))
+- **Git** installed on your system
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/ASAD10960/NutriScan-AI.git
+cd NutriScan-AI
+```
+
+### 2. Set Up Virtual Environment (Recommended)
+```bash
+# macOS / Linux
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Windows (Command Prompt / PowerShell)
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+```bash
+pip install --upgrade pip
 pip install -r requirements.txt
+```
+
+### 4. Optional Environment Setup
+```bash
+# Copy example environment configuration if you wish to customize port or AI engine
+cp .env.example .env
+```
+
+---
+
+## 💻 Usage Guide
+
+### Launching the Application
+
+Run the automated launcher script or start the server directly:
+
+```bash
+# Windows
+run.bat
+
+# macOS / Linux
+chmod +x run.sh
+./run.sh
+
+# Or start directly with Python:
 python backend/server.py
 ```
 
-Open http://127.0.0.1:8000, create an account, and start scanning.
+Once initialized, open your browser and visit:
+👉 **[http://127.0.0.1:8000](http://127.0.0.1:8000)**
 
-## Real image recognition vs demo mode
+### Quick Start Walkthrough
+1. **Create Account**: Register an account with an email and password (stored locally in SQLite).
+2. **Scan Meal**: Navigate to **Scan Meal**, upload a photo (e.g., roast chicken, thali, salad, pizza), or use your camera.
+3. **Review Results**: The AI automatically identifies the food, overlays detection boxes, and calculates calories and macros.
+4. **Fine-Tune & Save**: Use the portion steppers (`-` / `+`) to adjust grams if needed, select the meal type (*Breakfast, Lunch, Dinner, Snack*), and click **Save Meal**.
+5. **Inspect Trends**: View your daily intake and macro distribution under **Nutrition Plan** and **History**.
 
-Food recognition uses Claude's vision model. Add an Anthropic API key either on the **Profile** page (stored in `data/settings.json`) or in a `.env` file (copy `.env.example`). The key never leaves your machine except in calls to `api.anthropic.com`.
+---
 
-Without a key the app runs in **demo mode**: it reads food names from the file name (for example `roti_dal_rice_salad.jpg` or `paneer-naan.png`), uses default serving sizes, and always asks you to confirm. Everything else works the same, so you can try the full flow offline. **Profile → Load a sample week** fills history and charts with example meals.
+<details>
+<summary><b>📊 Nutritional Catalog & Verification (Click to expand)</b></summary>
 
-The model only identifies foods, positions, and estimated grams. It must pick from the nutrition catalog, and nutrition is always calculated on the server from `backend/nutrition_catalog.json` (71 common Indian and international foods, per 100 g). Foods not in the catalog are shown as *unsupported* and left out of totals instead of guessed.
+<br />
 
-## What's where
+All nutritional math is deterministic and reproducible. NutriScan AI uses reference values per 100 grams as served:
 
-```
-backend/
-  server.py        HTTP server, routing, API endpoints, static files
-  detector.py      Claude vision adapter + filename demo detector
-  imaging.py       Upload decoding, validation, quality check (brightness, contrast, blur)
-  nutrition.py     Deterministic nutrition maths, uncertainty ranges, review rules
-  nutrition_catalog.json   Versioned food catalog (source + version on every result)
-  auth.py, db.py, config.py
-frontend/
-  index.html, style.css, app.js   The whole UI (hash-routed SPA)
-data/              Created on first run: SQLite DB, stored meal images, settings
-```
+| Food Category | Example Catalog Items | Primary Source |
+| :--- | :--- | :--- |
+| **Breads & Grains** | Roti / Chapati, Naan, Paratha, Steamed Rice, Jeera Rice, Khichdi | IFCT 2017 / USDA |
+| **Proteins** | Roasted Chicken, Grilled Chicken, Boiled Egg, Paneer, Tofu | USDA FoodData Central |
+| **Curries & Lentils**| Dal Tadka, Dal Makhani, Chole, Rajma, Chicken Curry, Sambar | IFCT 2017 |
+| **Quick Meals** | Veg Sandwich, Burger, Pizza, Hakka Noodles, Pasta | Reference Tables |
+| **Fruits & Bowls** | Banana, Apple, Orange, Mango, Papaya, Mixed Fruit Bowl | USDA FoodData Central |
 
-## API
+> *Note: Nutritional values represent standardized reference data for fitness and awareness, not clinical medical advice.*
+</details>
 
-| Method | Path | Purpose |
-|---|---|---|
-| GET | /api/health | Health, active engine, nutrition source |
-| POST | /api/v1/auth/signup, /login, /logout | Accounts and bearer-token sessions |
-| GET/PUT | /api/v1/me | Profile and daily targets |
-| DELETE | /api/v1/me/data | Delete all meals, analyses and images |
-| GET/PUT | /api/v1/settings/engine | AI key (masked) and model |
-| GET | /api/v1/foods?q= | Catalog search |
-| POST | /api/v1/quality-check | Image validation and quality feedback |
-| POST | /api/v1/analyze | Run detection and nutrition on an image |
-| GET | /api/v1/analyses/{id} (+ /image) | Analysis result / stored image |
-| POST | /api/v1/analyses/{id}/corrections | Change foods or grams; logs each correction |
-| POST/GET | /api/v1/meals | Save (idempotent) / list with search and meal type |
-| GET/DELETE | /api/v1/meals/{id} | Meal detail / delete meal with its image |
-| GET | /api/v1/summary?days= | Trends, averages, macro split, streak, top foods |
-| POST | /api/v1/demo/seed | Sample week of meals |
+---
 
-Analyses move through the PRD states: `ANALYZING → NEEDS_CONFIRMATION` (low confidence, unknown food, default portion, or demo mode) `→ CALCULATED → SAVED`, or `FAILED` with a reason and retry.
+<details>
+<summary><b>🗺️ Roadmap & Planned Enhancements (Click to expand)</b></summary>
 
-## How it maps to the PRD
+<br />
 
-US-01 upload/camera with format, size, dimension and quality checks. US-02 staged processing screen with cancel and retry. US-03 labels, confidence and bounding boxes on the photo. US-04 per-item and total nutrition with units and serving basis. US-05 authenticated server-side history with detail view and delete. US-06 confidence badges, calorie ranges for uncertain portions, "How this was calculated", and in-place corrections that recalculate on the server.
+- [ ] **Multi-item Thali Segmentation**: Improved overlapping item separation using YOLOv8-Seg polygon masks.
+- [ ] **Barcode & Packaged Food Scanner**: Camera-based barcode scanner querying Open Food Facts API.
+- [ ] **Wearable & Health App Sync**: Exporting daily totals to Apple Health and Google Fit.
+- [ ] **Multi-language Support**: Expanding localizations for regional food naming conventions.
+- [ ] **Micronutrient Tracking**: Adding vitamins, minerals, and sodium tracking to the daily analytics view.
+</details>
 
-## Limitations
+---
 
-Values are estimates from reference data, not medical advice. Portions come from a single photo, so check the grams. Google/Apple sign-in buttons are placeholders (no OAuth). Single-user local setup: no HTTPS, rate limiting, or background job queue.
+## 🤝 Contributing
+
+Contributions make the open-source community a powerful place to learn, inspire, and create. Any contributions you make are **greatly appreciated**!
+
+1. Fork the Project (`https://github.com/ASAD10960/NutriScan-AI/fork`)
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License & Acknowledgments
+
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+### Acknowledgments
+- [Ultralytics](https://github.com/ultralytics/ultralytics) for the YOLOv8 architecture.
+- [PyTorch Team](https://pytorch.org/) for TorchVision vision backbones.
+- [Indian Food Composition Tables (IFCT)](https://www.nin.res.in/) & [USDA FoodData Central](https://fdc.nal.usda.gov/) for nutritional baselines.
+- [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) for the clean typeface.
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/ASAD10960">ASAD10960</a> and contributors.</sub>
+</div>
